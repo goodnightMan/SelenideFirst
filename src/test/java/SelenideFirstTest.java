@@ -16,12 +16,11 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 public class SelenideFirstTest {
-
-    @BeforeAll
+    /*@BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
     }
-
+*/
     @Test
     void codeJUnit5Test() {
         //  Откройте страницу Selenide в Github
@@ -32,12 +31,12 @@ public class SelenideFirstTest {
         //Ввести в поле поиска SoftAssertions
         $("#wiki-pages-filter").setValue("SoftAssertions");
         //Проверить что страница найдена
-        $("#wiki-pages-box").$("ul").shouldHave(text("SoftAssertions")).click();
+        //$("#wiki-pages-box").$("ul").shouldHave(text("SoftAssertions")).click();
         // Откройте страницу SoftAssertions, проверьте что внутри есть пример кода для JUnit5
         //Перейти на страницу oftAssertions
         //$("#wiki-pages-box").$("ul").$(byText("SoftAssertions")).click();
         //Проверить наличие кода для JUnit5
-        $("#wiki-content").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
+        //$("#wiki-content").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
     }
 
     @Test
